@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](../images/screenshot.png)
+![](https://github.com/madegilangaditya/3-column-preview-card-component-main/images/screenshot.png)
 
 
 ### Links
