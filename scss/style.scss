@@ -1,0 +1,89 @@
+@import 'config';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    @include set-font(0.9375rem, $font-text, $p-color); 
+    line-height: 1.7;
+}
+h2{
+    @include set-font(2.25rem, $font-heading, $h-color);
+}
+
+.container{
+    max-width: 920px;
+    margin: auto;
+
+}
+.showcase{
+    background-color: $h-color;
+    padding: 170px 0px 130px 0px;
+    min-height: 100vh;
+
+    &-card{
+        display: grid;
+        border-radius: 8px;
+        overflow: hidden;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .col{
+            display: grid;
+            padding: 45px 47px;
+
+            h2{
+                text-transform: uppercase;
+                line-height: 1.2;
+            }
+            img, h2{
+                margin-bottom: 33px;
+            }
+
+            p{
+                margin-bottom: 85px;
+            }
+        }
+        @include set-column-color(col-1, $bright-orange);
+        @include set-column-color(col-2, $dark-cyan);
+        @include set-column-color(col-3, $very-dark-cyan);
+        
+
+        .btn{
+            display: inline-block;
+            background-color: $h-color;
+            border-radius: 25px;
+            border: 2px solid $h-color;
+            padding: 11px 30px;
+            text-decoration: none;
+        }
+        .btn:hover{
+            background-color: transparent;
+            color: $h-color;
+        }
+    }
+}
+@media all and (max-width:600px) {
+    .showcase{
+        padding: 88px 24px;
+    
+        &-card{
+            grid-template-columns: 1fr;
+    
+            .col{
+                
+                padding: 45px 50px;
+    
+                img, h2{
+                    margin-bottom: 40px;
+                }
+    
+                p{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

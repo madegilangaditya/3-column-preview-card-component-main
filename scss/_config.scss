@@ -1,0 +1,24 @@
+$font-heading: 'Big Shoulders Display', cursive;
+$font-text:'Lexend Deca', sans-serif;
+$bright-orange:hsl(31, 77%, 52%);
+$dark-cyan:hsl(184, 100%, 22%);
+$very-dark-cyan:hsl(179, 100%, 13%);
+$p-color:rgba(255, 255, 255, 0.75);
+$h-color:hsl(0, 0%, 95%);
+
+@mixin set-font($size, $family, $color){
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+}
+
+@mixin set-column-color($col, $color) {
+    .#{$col}{
+        background-color: $color;
+        .btn{
+            color: $color;
+            justify-self: start;
+            align-self: end;
+        }
+    }
+}
